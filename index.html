@@ -127,7 +127,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -550,113 +550,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://182.43.235.69:10002/2022/05/03/hexo%E5%BB%BA%E7%AB%99%E6%80%BB%E7%BB%93/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/ipadipod.png">
-      <meta itemprop="name" content="ipad ipod">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="星辰大海">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 星辰大海">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/05/03/hexo%E5%BB%BA%E7%AB%99%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">hexo建站总结</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-05-03 00:00:00" itemprop="dateCreated datePublished" datetime="2022-05-03T00:00:00+00:00">2022-05-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-08 16:29:05" itemprop="dateModified" datetime="2022-05-08T16:29:05+00:00">2022-05-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <ol>
-<li><p>最终的使用写作发布方法：</p>
-</li>
-<li><ol>
-<li>macOS上创建桌面的上的hexo-next-md文件夹</li>
-<li>使用typora编写md文件，并保存到这个文件夹；</li>
-<li>在owncloud中新建一个hexo用户，获得他的webdav地址；</li>
-<li>使用访达连接owncloud容器中hexo用户的webdav文件夹；</li>
-<li>将md文件从mac的hexo-next-md文件夹复制到webdav文件夹中的myhexo/source/_posts子文件夹（或者在编写md文件的时候直接保存到此文件夹）；</li>
-<li>在ECS上运行/root/hexog.sh脚本，它会将webdav子文件夹中的md文件移动到hexo-next容器的md发布文件夹（/mnt/docker/hexo-next/myhexo/source/_posts）中，并远程运行hexo-next容器内的hexo g指令更新网站。</li>
-<li>配置好github deploy，hexo d发布</li>
-<li>在sm.ms注册账号，生成API token;</li>
-<li>使用upic挂载sm.ms图床使用。</li>
-</ol>
-</li>
-<li>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/05/03/hexo%E5%BB%BA%E7%AB%99%E6%80%BB%E7%BB%93/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://182.43.235.69:10002/2022/05/02/macos%20typora%E7%BC%96%E5%86%99md%E6%96%87%E6%A1%A3%E5%B9%B6%E5%8F%91%E5%B8%83%E5%88%B0ecs%20hexo%E5%AE%B9%E5%99%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -675,7 +568,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/05/02/macos%20typora%E7%BC%96%E5%86%99md%E6%96%87%E6%A1%A3%E5%B9%B6%E5%8F%91%E5%B8%83%E5%88%B0ecs%20hexo%E5%AE%B9%E5%99%A8/" class="post-title-link" itemprop="url">macos typora编写md文档并发布到ecs hexo容器+自建minio图床</a>
+          <a href="/2022/05/02/macos%20typora%E7%BC%96%E5%86%99md%E6%96%87%E6%A1%A3%E5%B9%B6%E5%8F%91%E5%B8%83%E5%88%B0ecs%20hexo%E5%AE%B9%E5%99%A8/" class="post-title-link" itemprop="url">macos typora编写md文档并发布到ecs hexo容器</a>
         </h2>
 
         <div class="post-meta-container">
@@ -693,7 +586,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-08 16:29:05" itemprop="dateModified" datetime="2022-05-08T16:29:05+00:00">2022-05-08</time>
+      <time title="修改时间：2022-05-10 04:37:40" itemprop="dateModified" datetime="2022-05-10T04:37:40+00:00">2022-05-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -795,7 +688,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-10 04:34:06" itemprop="dateModified" datetime="2022-05-10T04:34:06+00:00">2022-05-10</time>
+      <time title="修改时间：2022-05-10 04:38:38" itemprop="dateModified" datetime="2022-05-10T04:38:38+00:00">2022-05-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -856,7 +749,7 @@
 <h2 id="四、对象存储"><a href="#四、对象存储" class="headerlink" title="四、对象存储"></a>四、对象存储</h2><h3 id="（一）天翼云OOS"><a href="#（一）天翼云OOS" class="headerlink" title="（一）天翼云OOS"></a>（一）天翼云OOS</h3><ul>
 <li>s3fs工具挂载</li>
 <li>owncloud s3插件挂载</li>
-<li>云控制台直接操作文件夹<h3 id="（二）阿里云"><a href="#（二）阿里云" class="headerlink" title="（二）阿里云"></a>（二）阿里云</h3></li>
+<li>云控制台直接操作文件夹<h3 id="（二）阿里云OSS"><a href="#（二）阿里云OSS" class="headerlink" title="（二）阿里云OSS"></a>（二）阿里云OSS</h3></li>
 <li>ossfs工具挂载</li>
 <li>owncloud s3插件挂载</li>
 <li>云控制台操作</li>
@@ -948,7 +841,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-08 15:48:33" itemprop="dateModified" datetime="2022-05-08T15:48:33+00:00">2022-05-08</time>
+      <time title="修改时间：2022-05-10 04:39:42" itemprop="dateModified" datetime="2022-05-10T04:39:42+00:00">2022-05-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -970,7 +863,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><video width="320" height="240" controls>     <source src="http://182.43.235.69:3000/ipadipod/%E9%87%8D%E6%96%B0%E5%87%BA%E5%8F%91.mp4" type="video/mp4"> </video></p>
+          <h2 id="趁一切都还来得及，重新出发"><a href="#趁一切都还来得及，重新出发" class="headerlink" title="趁一切都还来得及，重新出发"></a>趁一切都还来得及，重新出发</h2><p><video width="320" height="240" controls>     <source src="http://182.43.235.69:3000/ipadipod/%E9%87%8D%E6%96%B0%E5%87%BA%E5%8F%91.mp4" type="video/mp4"> </video></p>
 
       
     </div>
@@ -997,7 +890,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://182.43.235.69:10002/2022/04/28/video/">
+    <link itemprop="mainEntityOfPage" href="http://182.43.235.69:10002/2022/04/28/markdown_multimedia/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/ipadipod.png">
@@ -1015,7 +908,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/28/video/" class="post-title-link" itemprop="url">markdown播放caddy中的音视频</a>
+          <a href="/2022/04/28/markdown_multimedia/" class="post-title-link" itemprop="url">markdown播放caddy中的音视频</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1144,6 +1037,91 @@
     
     <div class="post-body" itemprop="articleBody">
           <p><img src="https://ipadipod.oss-cn-guangzhou.aliyuncs.com/20220429153312.png" alt="GDP"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://182.43.235.69:10002/2022/04/28/gfw/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/ipadipod.png">
+      <meta itemprop="name" content="ipad ipod">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="星辰大海">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 星辰大海">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/28/gfw/" class="post-title-link" itemprop="url">雄伟长城</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-04-28 07:59:11" itemprop="dateCreated datePublished" datetime="2022-04-28T07:59:11+00:00">2022-04-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-05-08 15:48:33" itemprop="dateModified" datetime="2022-05-08T15:48:33+00:00">2022-05-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%94%BF%E6%B2%BB/" itemprop="url" rel="index"><span itemprop="name">政治</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><img src="https://ipadipod.oss-cn-guangzhou.aliyuncs.com/20220428160318.png" alt="雄伟长城"></p>
 
       
     </div>
