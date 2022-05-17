@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"182.43.235.69","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.11.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="title: 《鸟哥的Linux私房菜基础学习篇》 date: 2022-05-18 categories: 技术 tags: linux 鸟哥的Linux私房菜-基础篇》第四版 下载链接  作者: 鸟哥出版社: 人民邮电出版社副标题: 基础学习篇出版年: 2010-6-28页数: 778定价: 88.00元装帧: 平装丛书: 鸟哥的Linux私房菜ISBN: 9787115226266 内容简介">
+<meta property="og:type" content="article">
+<meta property="og:title" content="星辰大海">
+<meta property="og:url" content="http://182.43.235.69:10002/2022/05/17/%E3%80%8A%E9%B8%9F%E5%93%A5%E7%9A%84Linux%E7%A7%81%E6%88%BF%E8%8F%9C%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AF%87%E3%80%8B/index.html">
+<meta property="og:site_name" content="星辰大海">
+<meta property="og:description" content="title: 《鸟哥的Linux私房菜基础学习篇》 date: 2022-05-18 categories: 技术 tags: linux 鸟哥的Linux私房菜-基础篇》第四版 下载链接  作者: 鸟哥出版社: 人民邮电出版社副标题: 基础学习篇出版年: 2010-6-28页数: 778定价: 88.00元装帧: 平装丛书: 鸟哥的Linux私房菜ISBN: 9787115226266 内容简介">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://182.43.235.69:9000/hexo-pics/uPic/s4399937.jpg">
+<meta property="og:image" content="http://182.43.235.69:9000/hexo-pics/uPic/u1650020-33.jpg">
+<meta property="og:image" content="http://182.43.235.69:9000/hexo-pics/uPic/u37681645-2.jpg">
+<meta property="article:published_time" content="2022-05-17T02:05:00.752Z">
+<meta property="article:modified_time" content="2022-05-17T02:05:00.788Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://182.43.235.69:9000/hexo-pics/uPic/s4399937.jpg">
+
+
+<link rel="canonical" href="http://182.43.235.69:10002/2022/05/17/%E3%80%8A%E9%B8%9F%E5%93%A5%E7%9A%84Linux%E7%A7%81%E6%88%BF%E8%8F%9C%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AF%87%E3%80%8B/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://182.43.235.69:10002/2022/05/17/%E3%80%8A%E9%B8%9F%E5%93%A5%E7%9A%84Linux%E7%A7%81%E6%88%BF%E8%8F%9C%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AF%87%E3%80%8B/","path":"2022/05/17/《鸟哥的Linux私房菜基础学习篇》/","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title> | 星辰大海</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">星辰大海</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">万物自由自在</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AE%B9%E7%AE%80%E4%BB%8B-%C2%B7-%C2%B7-%C2%B7-%C2%B7-%C2%B7-%C2%B7"><span class="nav-number">1.</span> <span class="nav-text">内容简介 · · · · · ·</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%9C%E8%80%85%E7%AE%80%E4%BB%8B-%C2%B7-%C2%B7-%C2%B7-%C2%B7-%C2%B7-%C2%B7"><span class="nav-number">2.</span> <span class="nav-text">作者简介 · · · · · ·</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95-%C2%B7-%C2%B7-%C2%B7-%C2%B7-%C2%B7-%C2%B7"><span class="nav-number">3.</span> <span class="nav-text">目录 · · · · · ·</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E6%96%87%E6%91%98%E5%BD%95-%C2%B7-%C2%B7-%C2%B7-%C2%B7-%C2%B7-%C2%B7-%E5%85%A8%E9%83%A8"><span class="nav-number">4.</span> <span class="nav-text">原文摘录 · · · · · · ( 全部 )</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt=""
+      src="/images/ipadipod.png">
+  <p class="site-author-name" itemprop="name"></p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yourname" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yourname@gmail.com" title="E-Mail → mailto:yourname@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://182.43.235.69:10002/2022/05/17/%E3%80%8A%E9%B8%9F%E5%93%A5%E7%9A%84Linux%E7%A7%81%E6%88%BF%E8%8F%9C%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AF%87%E3%80%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/ipadipod.png">
+      <meta itemprop="name" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="星辰大海">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 星辰大海">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-05-17 02:05:00" itemprop="dateCreated datePublished" datetime="2022-05-17T02:05:00+00:00">2022-05-17</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>title: 《鸟哥的Linux私房菜基础学习篇》</p>
+<p>date: 2022-05-18</p>
+<p>categories: 技术</p>
+<p>tags: linux</p>
+<p><a href="http://182.43.235.69:3000/ipadipod/%E3%80%8A%E9%B8%9F%E5%93%A5%E7%9A%84Linux%E7%A7%81%E6%88%BF%E8%8F%9C-%E5%9F%BA%E7%A1%80%E7%AF%87%E3%80%8B%E7%AC%AC%E5%9B%9B%E7%89%88.pdf">鸟哥的Linux私房菜-基础篇》第四版 下载链接</a></p>
+<p><a target="_blank" rel="noopener" href="https://img1.doubanio.com/view/subject/l/public/s4399937.jpg"><br><img src="http://182.43.235.69:9000/hexo-pics/uPic/s4399937.jpg" alt="鸟哥的Linux私房菜"></a></p>
+<p>作者: <a target="_blank" rel="noopener" href="https://book.douban.com/author/1028285">鸟哥</a><br>出版社: <a target="_blank" rel="noopener" href="https://book.douban.com/press/2609">人民邮电出版社</a><br>副标题: 基础学习篇<br>出版年: 2010-6-28<br>页数: 778<br>定价: 88.00元<br>装帧: 平装<br>丛书: <a target="_blank" rel="noopener" href="https://book.douban.com/series/1496">鸟哥的Linux私房菜</a><br>ISBN: 9787115226266</p>
+<h2 id="内容简介-·-·-·-·-·-·"><a href="#内容简介-·-·-·-·-·-·" class="headerlink" title="内容简介 · · · · · ·"></a>内容简介 · · · · · ·</h2><p>本书是最具知名度的Linux入门书《鸟哥的Linux私房菜基础学习篇》的最新版，全面而详细地介绍了Linux操作系统。全书分为5个部分：第一部分着重说明Linux的起源及功能，如何规划和安装Linux主机；第二部分介绍Linux的文件系统、文件、目录与磁盘的管理；第三部分介绍文字模式接口 shell和管理系统的好帮手shell脚本，另外还介绍了文字编辑器vi和vim的使用方法；第四部分介绍了对于系统安全非常重要的Linux账号的管理，以及主机系统与程序的管理，如查看进程、任务分配和作业管理；第五部分介绍了系统管理员(root)的管理事项，如了解系统运行状况、系统服务，针对登录文件进行解析，对系统进行备份以及核心的管理等。本书内容丰富全面，基本概念的讲解非常细致，深入浅出。各种功能和命令的介绍，都配以大量的实例操作和详尽的解析。本书是初学者学习Linux不可多得的一本入门好书。</p>
+<span id="more"></span>
+
+<h2 id="作者简介-·-·-·-·-·-·"><a href="#作者简介-·-·-·-·-·-·" class="headerlink" title="作者简介 · · · · · ·"></a>作者简介 · · · · · ·</h2><p>鸟哥 台湾成功大学环境工程系博士，就学期间由于研究需要接触到Linux操作系统，又因实验室交接需求而建立“鸟哥的Linux私房菜”网站。因个人喜好“絮叨”，网站文章风格就此成形。</p>
+<p>曾任台湾多家知名Linux教育中心讲师，目前于昆山科技大学资讯传播系教授Linux相关课程。专长是Linux 操作系统、网站规划与维护、网络安全，兴趣是写作与阅读，研究方向是网络应用整合。</p>
+<h2 id="目录-·-·-·-·-·-·"><a href="#目录-·-·-·-·-·-·" class="headerlink" title="目录 · · · · · ·"></a>目录 · · · · · ·</h2><p>第一部分　Linux的规则与安装<br>第0章　计算机概论　1<br>0.1　计算机：辅助人脑的好工具　2<br>0.1.1　计算机硬件的五大单元　2<br>0.1.2　CPU的种类　3<br>0.1.3　接口设备　4<br>0.1.4　运作流程　4<br>0.1.5　计算机分类　5<br>0.1.6　计算机上面常用的计算单位(大小、速度等)　6<br>0.2　个人计算机架构与接口设备　7<br>0.2.1　CPU　7<br>0.2.2　内存　9<br>0.2.3　显卡　11<br>0.2.4　硬盘与存储设备　12<br>0.2.5　PCI适配卡　14<br>0.2.6　主板　15<br>0.2.7　电源　16<br>0.2.8　选购须知　16<br>0.3　数据表示方式　17<br>0.3.1　数字系统　17<br>.0.3.2　文字编码系统　18<br>0.4　软件程序运行　18<br>0.4.1　机器程序与编译程序　18<br>0.4.2　操作系统　19<br>0.4.3　应用程序　22<br>0.5　重点回顾　22<br>0.6　本章习题　23<br>0.7　参考数据与扩展阅读　24<br>第1章　Linux是什么　25<br>1.1　Linux是什么　26<br>1.1.1　Linux是什么　26<br>1.1.2　Linux之前UNIX的历史　27<br>1.1.3　关于GNU项目　32<br>1.2　Torvalds的Linux开发　34<br>1.2.1　Minix　34<br>1.2.2　对386硬件的多任务测试　35<br>1.2.3　初次释出Linux 0.02　36<br>1.2.4　Linux的开发：虚拟团队的产生　37<br>1.2.5　Linux的内核版本　38<br>1.2.6　Linux distributions　39<br>1.3　Linux的特色　42<br>1.3.1　Linux的特色　42<br>1.3.2　Linux的优缺点　43<br>1.3.3　关于授权　45<br>1.4　重点回顾　46<br>1.5　本章习题　46<br>1.6　参考数据与扩展阅读　47<br>第2章　Linux如何学习　48<br>2.1　Linux当前的应用角色　49<br>2.1.1　企业环境的利用　49<br>2.1.2　个人环境的使用　50<br>2.2　鸟哥的Linux苦难经验回忆录　51<br>2.2.1　鸟哥的Linux学习之路　51<br>2.2.2　学习心态的分别　53<br>2.2.3　X Window的学习　54<br>2.3　有心向Linux操作系统学习者学习态度　55<br>2.3.1　从头学习Linux基础　56<br>2.3.2　选择一本易读的工具书　57<br>2.3.3　实践再实践　57<br>2.3.4　发生问题怎么处理..　58<br>2.4　鸟哥的建议(重点在Solution的学习)　59<br>2.5　重点回顾　60<br>2.6　本章习题　61<br>2.7　参考数据与扩展阅读　61<br>第3章　主机规划与磁盘分区　62<br>3.1　Linux与硬件的搭配　63<br>3.1.1　认识计算机的硬件配置　63<br>3.1.2　选择与Linux搭配的主机配置　64<br>3.1.3　各硬件设备在Linux中的文件名　66<br>3.2　磁盘分区　67<br>3.2.1　磁盘连接的方式与设备文件名的关系　67<br>3.2.2　磁盘的组成复习　68<br>3.2.3　磁盘分区表(partition table)　69<br>3.2.4　开机流程与主引导分区(MBR)　72<br>3.2.5　Linux安装模式下，磁盘分区的选择(极重要)　74<br>3.3　安装Linux前的规划　76<br>3.3.1　选择适当的distribution　76<br>3.3.2　主机的服务规划与硬件的关系　77<br>3.3.3　主机硬盘的主要规划　79<br>3.3.4　鸟哥说：关于练习机的安装建议　80<br>3.3.5　鸟哥的两个实际案例　80<br>3.3.6　大硬盘配合旧主机造成的无法开机问题　81<br>3.4　重点回顾　82<br>3.5　本章习题　82<br>3.6　参考数据与扩展阅读　82<br>第4章　安装CentOS 5.x与多重引导小技巧　83<br>4.1　本练习机的规划(尤其是分区参数)　84<br>4.2　开始安装CentOS 5　85<br>4.2.1　调整启动媒体(BIOS)　86<br>4.2.2　选择安装结构与开机　87<br>4.2.3　选择语系数据　89<br>4.2.4　磁盘分区　90<br>4.2.5　引导装载程序、网络、时区设置与root密码　95<br>4.2.6　软件选择　98<br>4.2.7　其他功能：RAM testing、安装笔记本电脑的内核参数(Option)　99<br>4.3　安装后的首次设置　100<br>4.4　多重引导安装流程与技巧　104<br>4.4.1　新主机仅有一块硬盘　104<br>4.4.2　旧主机有两块以上硬盘　105<br>4.4.3　旧主机只有一块硬盘　105<br>4.5　关于大硬盘导致无法开机的问题　106<br>4.6　重点回顾　106<br>4.7　本章习题　107<br>4.8　参考数据与扩展阅读　107<br>第5章　首次登录与在线求助man page　108<br>5.1　首次登录系统　109<br>5.1.1　首次登录CentOS 5.x图形界面　109<br>5.1.2　GNOME的操作与注销　110<br>5.1.3　KDE的操作与注销　113<br>5.1.4　X Window与命令行模式的切换　115<br>5.1.5　在终端界面登录linux　116<br>5.2　在命令行模式下执行命令　117<br>5.2.1　开始执行命令　117<br>5.2.2　基础命令的操作　118<br>5.2.3　重要的热键[Tab], [ctrl]-c, [ctrl]-d　121<br>5.2.4　错误信息的查看　122<br>5.3　Linux系统的在线求助man page与info page　122<br>5.3.1　man page　123<br>5.3.2　info page　127<br>5.3.3　其他有用的文件(documents)　129<br>5.4　超简单文本编辑器：nano　130<br>5.5　正确的关机方法　131<br>5.5.1　数据同步写入磁盘：sync　132<br>5.5.2　惯用的关机命令：shutdown　132<br>5.5.3　重启、关机：reboot, halt, poweroff　133<br>5.5.4　切换执行等级：init　133<br>5.6　开机过程的问题排解　134<br>5.6.1　文件系统错误的问题　134<br>5.6.2　忘记root密码　135<br>5.7　重点回顾　136<br>5.8　本章习题　136<br>5.9　参考数据与扩展阅读　137<br>第二部分　Linux文件、目录与磁盘格式<br>第6章　Linux的文件权限与目录配置　138<br>6.1　用户与用户组　139<br>6.2　Linux文件权限概念　140<br>6.2.1　Linux文件属性　141<br>6.2.2　如何改变文件属性与权限　144<br>6.2.3　目录与文件的权限意义　147<br>6.2.4　Linux文件种类与扩展名　150<br>6.3　Linux目录配置　152<br>6.3.1　Linux目录配置标准：FHS　152<br>6.3.2　目录树(directory tree)　156<br>6.3.3　绝对路径与相对路径　158<br>6.3.4　CentOS的查看　159<br>6.4　重点回顾　159<br>6.5　本章练习　160<br>6.6　参考数据与扩展阅读　160<br>第7章　Linux文件与目录管理　161<br>7.1　目录与路径　162<br>7.1.1　相对路径与绝对路径　162<br>7.1.2　目录的相关操作　162<br>7.1.3　关于执行文件路径的变量：$PATH　165<br>7.2　文件与目录管理　167<br>7.2.1　查看文件与目录：ls　167<br>7.2.2　复制、删除与移动：cp, rm, mv　169<br>7.2.3　取得路径的文件名与目录名称　173<br>7.3　文件内容查阅　173<br>7.3.1　直接查看文件内容　173<br>7.3.2　可翻页查看　175<br>7.3.3　数据选取　176<br>7.3.4　非纯文本文件：od　177<br>7.3.5　修改文件时间或创建新文件：touch　178<br>7.4　文件与目录的默认权限与隐藏权限　180<br>7.4.1　文件默认权限：umask　181<br>7.4.2　文件隐藏属性：chattr, lsattr　183<br>7.4.3　文件特殊权限：SUID, SGID, SBIT　184<br>7.4.4　查看文件类型：file　187<br>7.5　命令与文件的查询　187<br>7.5.1　脚本文件名的查询　187<br>7.5.2　文件名的查找　188<br>7.6　权限与命令间的关系(极重要)　192<br>7.7　重点回顾　193<br>7.8　本章习题　194<br>7.9　参考数据与扩展阅读　195<br>第8章　Linux磁盘与文件系统管理　196<br>8.1　认识EXT2文件系统　197<br>8.1.1　硬盘组成与分区的复习　197<br>8.1.2　文件系统特性　197<br>8.1.3　Linux的EXT2文件系统(inode)　199<br>8.1.4　与目录树的关系　204<br>8.1.5　EXT2/EXT3文件的访问与日志文件系统的功能　206<br>8.1.6　Linux文件系统的操作　208<br>8.1.7　挂载点(mount point)的意义　208<br>8.1.8　其他Linux支持的文件系统 与VFS　209<br>8.2　文件系统的简单操作　210<br>8.2.1　磁盘与目录的容量：df, du　210<br>8.2.2　连接文件：ln　213<br>8.3　磁盘的分区、格式化、检验与挂载　217<br>8.3.1　磁盘分区：fdisk　217<br>8.3.2　磁盘格式化　223<br>8.3.3　磁盘检验：fsck, badblocks　225<br>8.3.4　磁盘挂载与卸载　226<br>8.3.5　磁盘参数修改　231<br>8.4　设置开机挂载　234<br>8.4.1　开机挂载/etc/fstab及/etc/mtab　234<br>8.4.2　特殊设备loop挂载(镜像文件不刻录就挂载使用)　236<br>8.5　内存交换空间(swap)的构建　238<br>8.5.1　使用物理分区构建swap　238<br>8.5.2　使用文件构建swap　240<br>8.5.3　swap使用上的限制　241<br>8.6　文件系统的特殊查看与操作　241<br>8.6.1　boot sector与superblock的关系　241<br>8.6.2　磁盘空间的浪费问题　243<br>8.6.3　利用GNU的parted进行分区行为　243<br>8.7　重点回顾　245<br>8.8　本章习题　245<br>8.9　参考数据与扩展阅读　246<br>第9章　文件与文件系统的压缩与打包　248<br>9.1　压缩文件的用途与技术　249<br>9.2　Linux系统常见的压缩命令　250<br>9.2.1　Compress　250<br>9.2.2　gzip, zcat　252<br>9.2.3　bzip2, bzcat　253<br>9.3　打包命令：tar　253<br>9.3.1　tar　254<br>9.4　完整备份工具：dump　259<br>9.4.1　dump　259<br>9.4.2　restore　262<br>9.5　光盘写入工具　265<br>9.5.1　mkisofs：新建镜像文件　265<br>9.5.2　Cdrecord：光盘刻录工具　267<br>9.6　其他常见的压缩与备份工具　269<br>9.6.1　dd　269<br>9.6.2　Cpio　270<br>9.7　重点回顾　272<br>9.8　本章习题　272<br>9.9　参考数据与扩展阅读　273<br>第三部分　学习shell与shell script<br>第10章　vim程序编辑器　274<br>10.1　vi与vim　275<br>10.1.1　为何要学vim　275<br>10.2　vi的使用　276<br>10.2.1　简单执行范例　277<br>10.2.2　按键说明　278<br>10.2.3　一个案例练习　281<br>10.2.4　vim的保存文件、恢复与打开时的警告信息　282<br>10.3　vim的功能　284<br>10.3.1　块选择(Visual Block)　285<br>10.3.2　多文件编辑　286<br>10.3.3　多窗口功能　286<br>10.3.4　vim环境设置与记录：～/.vimrc, ～/.viminfo　287<br>10.3.5　vim常用命令示意图　289<br>10.4　其他vim使用注意事项　289<br>10.4.1　中文编码的问题　289<br>10.4.2　DOS与Linux的断行字符　290<br>10.4.3　语系编码转换　290<br>10.5　重点回顾　291<br>10.6　本章练习　291<br>10.7　参考数据与扩展阅读　292<br>第11章　认识与学习bash　293<br>11.1　认识bash这个shell　294<br>11.1.1　硬件、内核与shell　294<br>11.1.2　为何要学命令行界面的shell　295<br>11.1.3　系统的合法shell与/etc/shells功能　295<br>11.1.4　bash shell的功能　296<br>11.1.5　bash shell的内置命令：type　298<br>11.1.6　命令的执行　298<br>11.2　shell的变量功能　299<br>11.2.1　什么是变量　299<br>11.2.2　变量的显示与设置：echo, unset　300<br>11.2.3　环境变量的功能　304<br>11.2.4　影响显示结果的语系变量(locale)　308<br>11.2.5　变量的有效范围　309<br>11.2.6　变量键盘读取、数组与声明：read，array，declare　310<br>11.2.7　与文件系统及程序的限制关系：ulimit　312<br>11.2.8　变量内容的删除、替代与替换　313<br>11.3　命令别名与历史命令　317<br>11.3.1　命令别名设置：alias，unalias　317<br>11.3.2　历史命令：history　318<br>11.4　Bash Shell的操作环境　320<br>11.4.1　路径与命令查找顺序　320<br>11.4.2　bash的登录与欢迎信息：/etc/issue, /etc/motd　320<br>11.4.3　bash 的环境配置文件　321<br>11.4.4　终端机的环境设置：stty, set　325<br>11.4.5　通配符与特殊符号　327<br>11.5　数据流重定向　328<br>11.5.1　什么是数据流重定向　329<br>11.5.2　命令执行的判断依据：<br>· · · · · · (收起)</p>
+<h2 id="原文摘录-·-·-·-·-·-·-全部"><a href="#原文摘录-·-·-·-·-·-·-全部" class="headerlink" title="原文摘录 · · · · · · ( 全部 )"></a>原文摘录 · · · · · · ( <a target="_blank" rel="noopener" href="https://book.douban.com/subject/4889838/blockquotes">全部</a> )</h2><ul>
+<li><p>AMD与Intel不同的地方在于主存储器是直接与CPU沟通而不通过北桥……这是两种CPU在架构上主要的差异点 (<a target="_blank" rel="noopener" href="https://book.douban.com/annotation/18242569/">查看原文</a>)</p>
+<p><a target="_blank" rel="noopener" href="https://www.douban.com/people/fengs/"><img src="http://182.43.235.69:9000/hexo-pics/uPic/u1650020-33.jpg" alt="img"></a> <a target="_blank" rel="noopener" href="https://www.douban.com/people/fengs/">滕子京</a> 12 回复 2012-05-11 04:59:31</p>
+<p>—— 引自章节：个人计算机架构与周边设备</p>
+</li>
+<li><p>由于AMD、Intel、VIA所开发出来到x86架构CPU被大量使用于个人计算机（Personal Computer）用途上面，因此，个人计算机常被称为x86计算机。那为何称为x86架构呢？这是因为最早到那个intel发展出来的CPU代号称为8086，后来依此架构有开发出80286，80386等，因此这种架构到CPU就被称为x86架构了。 (<a target="_blank" rel="noopener" href="https://book.douban.com/annotation/18770253/">查看原文</a>)</p>
+<p><a target="_blank" rel="noopener" href="https://www.douban.com/people/hipilee/"><img src="http://182.43.235.69:9000/hexo-pics/uPic/u37681645-2.jpg" alt="img"></a> <a target="_blank" rel="noopener" href="https://www.douban.com/people/hipilee/">hipilee</a> 2012-06-06 19:28:54</p>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/05/11/2022-05-11-%E5%AE%B6%E5%BA%AD%E5%BA%94%E6%80%A5%E7%89%A9%E8%B5%84%E6%B8%85%E5%8D%95/" rel="prev" title="家庭应急物资清单">
+                  <i class="fa fa-chevron-left"></i> 家庭应急物资清单
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder"></span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-626e93918b512736" async="async"></script>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@9.0.1/dist/mermaid.min.js","integrity":"sha256-CemUs9ITT7liCZpVMktcEw0BpAOZ1+mujlMB3UyuImU="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
