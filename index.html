@@ -126,7 +126,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">25</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -174,77 +174,6 @@
 
 
     <div class="main-inner index posts-expand">
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://182.43.235.69:10002/2022/08/11/%20%E5%85%A8%E7%BD%91%E9%A6%96%E5%8F%91%20%E8%89%BE%E9%9F%B5wifi%E7%BA%A2%E5%A4%96%E9%81%A5%E6%8E%A7%E5%99%A8%E6%94%B9%E9%80%A0%20/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/ipadipod.png">
-      <meta itemprop="name" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="星辰大海">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 星辰大海">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/08/11/%20%E5%85%A8%E7%BD%91%E9%A6%96%E5%8F%91%20%E8%89%BE%E9%9F%B5wifi%E7%BA%A2%E5%A4%96%E9%81%A5%E6%8E%A7%E5%99%A8%E6%94%B9%E9%80%A0%20/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-08-11 14:44:56 / 修改时间：14:44:57" itemprop="dateCreated datePublished" datetime="2022-08-11T14:44:56+00:00">2022-08-11</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><img src="https://www.mydigit.cn/static/image/common/online_member.gif" alt="img"> <em>发表于 2021-7-14 22:36:35</em> | <a target="_blank" rel="noopener" href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=265584&page=1&authorid=1218302">只看该作者</a> |<a target="_blank" rel="noopener" href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=265584&from=album">只看大图</a> <img src="https://www.mydigit.cn/static/image/common/arw_r.gif" alt="回帖奖励"></p>
-<p><strong>引言</strong> 还记得我上回那个帖子吗，传送门：<a target="_blank" rel="noopener" href="https://www.mydigit.cn/forum.php?mod=viewthread&tid=259477&extra=">https://www.mydigit.cn/forum.php?mod=viewthread&amp;tid=259477</a>。那里面说搞个红外万能遥控要20米的成本。 现在究极究极性价比版本来了，咸鱼偶然看到的艾韵智能的红外万能遥控器，5.6一个，6个包邮。厂商已经倒闭。官方APP别想了。但是我们可以买过来折腾。  <strong>大概看下外观</strong> 小方盒子，很精致 <img src="https://img.mydigit.cn/forum/202107/14/222005fwjkijz552kq5ki4.jpg" alt="img">  看下屁股，只有那两个脚垫下有螺丝。 <img src="https://img.mydigit.cn/forum/202107/14/222044qmv5ql7qufl5x50q.jpg" alt="img">  一般这种肯定是8266没跑了，拆开看看，熟不熟悉？ <img src="https://img.mydigit.cn/forum/202107/14/222155n4mv5tm433xi7cxs.jpg" alt="img">  看看背面：8266没跑了 <img src="https://img.mydigit.cn/forum/202107/14/222222bdhdyss8ccv2sd8n.jpg" alt="img">  红外二极管管够，接受的也有。  <strong>给大家奉上引脚图</strong> 以报废一个为代价，给大家量出来的。知道为什么报废吗，因为他这个三极管设计的有点巧妙。正常情况下我们完成一次红外波形的调制和发射之后。IO口会处于低电平状态。这个时候，放大红外信号的那个三极管被导通了，于是红外二极管，5V,地线这三个就被连起来了，然后成功的烧掉。干，我说为啥我一烧程序就发热，不写就好好的。开始我还怀疑这批是残次品了。 <img src="https://img.mydigit.cn/forum/202107/14/223104hbbln56lmhz6bqnm.jpg" alt="img">  <img src="https://img.mydigit.cn/forum/202107/14/222424wm6hl2d484dm444p.jpg" alt="img">  刷机就在右边焊上一排排针就好，全部引出了。那个DOWN就是和IO0相连的脚，烧录时和地连起来。   <strong>最后</strong>。<strong>是代码：<a target="_blank" rel="noopener" href="https://github.com/bznsix/8266IrRemote">https://github.com/bznsix/8266IrRemote</a></strong> 制作教程欢迎参考我上一篇帖子 这8266也是神了，咋都用不完，原来有老王的光合未来，现在有神奇的艾韵智能。 想买的搜x鱼关键字：红外转换器，注意是转换哦。 后续有时间给大家DIY个学习，发射一体的。因为这个屁股上自带个按键吗。 <strong>看在我给大家淌雷的份上，打赏下M币吧兄弟们。</strong></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
 
     
 
@@ -1089,6 +1018,92 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/05/12/%E6%96%B0%E6%89%8B%E7%90%86%E8%A7%A3HTML%E3%80%81CSS%E3%80%81javascript%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://182.43.235.69:10002/2022/05/11/2022-05-11-%E5%AE%B6%E5%BA%AD%E5%BA%94%E6%80%A5%E7%89%A9%E8%B5%84%E6%B8%85%E5%8D%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/ipadipod.png">
+      <meta itemprop="name" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="星辰大海">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 星辰大海">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/05/11/2022-05-11-%E5%AE%B6%E5%BA%AD%E5%BA%94%E6%80%A5%E7%89%A9%E8%B5%84%E6%B8%85%E5%8D%95/" class="post-title-link" itemprop="url">家庭应急物资清单</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-05-11 00:00:00 / 修改时间：03:12:27" itemprop="dateCreated datePublished" datetime="2022-05-11T00:00:00+00:00">2022-05-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><img src="http://182.43.235.69:9000/hexo-pics/uPic/2c925c6680acdaa60180b09fb1760118-20220511104004789.jpg" alt="img"></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/05/11/2022-05-11-%E5%AE%B6%E5%BA%AD%E5%BA%94%E6%80%A5%E7%89%A9%E8%B5%84%E6%B8%85%E5%8D%95/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
