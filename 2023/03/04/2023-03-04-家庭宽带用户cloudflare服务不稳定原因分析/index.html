@@ -21,26 +21,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"182.43.235.69","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.11.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="在日本新近回归主流的马克思主义思潮中，哲学家斋藤幸平是代表性人物。他的著作近年意外走红，他主张“去增长”是解决社会问题的唯一办法。">
+    <meta name="description" content="目标： cloudflare这么好用，又不需要固定IP（不需要买云主机），又隐私（看不到服务器真正IP），又安装（半截https），它不香吗？必须换用啊！  问题：      尝试将网站切换到unraid后，配置好cloudflared@centos7，结果发现cloudflared很不稳定，有时通有时不通。     看cloudflare网站tunnel列表上就是有时不通，有时健康度是“DEGR">
 <meta property="og:type" content="article">
-<meta property="og:title" content="新时代的马克思主义——去增长（degrowth)哲学">
-<meta property="og:url" content="http://182.43.235.69:10002/2022/11/11/%E5%A2%9E%E9%95%BF%E6%B2%A1%E6%9C%89%E8%AE%A9%E6%88%91%E4%BB%AC%E5%B9%B8%E7%A6%8F%EF%BC%9F/index.html">
+<meta property="og:title" content="家庭宽带用户cloudflare服务不稳定原因分析">
+<meta property="og:url" content="http://182.43.235.69:10002/2023/03/04/2023-03-04-%E5%AE%B6%E5%BA%AD%E5%AE%BD%E5%B8%A6%E7%94%A8%E6%88%B7cloudflare%E6%9C%8D%E5%8A%A1%E4%B8%8D%E7%A8%B3%E5%AE%9A%E5%8E%9F%E5%9B%A0%E5%88%86%E6%9E%90/index.html">
 <meta property="og:site_name" content="星辰大海">
-<meta property="og:description" content="在日本新近回归主流的马克思主义思潮中，哲学家斋藤幸平是代表性人物。他的著作近年意外走红，他主张“去增长”是解决社会问题的唯一办法。">
+<meta property="og:description" content="目标： cloudflare这么好用，又不需要固定IP（不需要买云主机），又隐私（看不到服务器真正IP），又安装（半截https），它不香吗？必须换用啊！  问题：      尝试将网站切换到unraid后，配置好cloudflared@centos7，结果发现cloudflared很不稳定，有时通有时不通。     看cloudflare网站tunnel列表上就是有时不通，有时健康度是“DEGR">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-11-11T00:00:00.000Z">
-<meta property="article:modified_time" content="2022-11-11T07:15:23.996Z">
+<meta property="article:published_time" content="2023-03-04T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-03-06T01:51:17.953Z">
+<meta property="article:tag" content="cloudflare">
+<meta property="article:tag" content="openclash">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://182.43.235.69:10002/2022/11/11/%E5%A2%9E%E9%95%BF%E6%B2%A1%E6%9C%89%E8%AE%A9%E6%88%91%E4%BB%AC%E5%B9%B8%E7%A6%8F%EF%BC%9F/">
+<link rel="canonical" href="http://182.43.235.69:10002/2023/03/04/2023-03-04-%E5%AE%B6%E5%BA%AD%E5%AE%BD%E5%B8%A6%E7%94%A8%E6%88%B7cloudflare%E6%9C%8D%E5%8A%A1%E4%B8%8D%E7%A8%B3%E5%AE%9A%E5%8E%9F%E5%9B%A0%E5%88%86%E6%9E%90/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://182.43.235.69:10002/2022/11/11/%E5%A2%9E%E9%95%BF%E6%B2%A1%E6%9C%89%E8%AE%A9%E6%88%91%E4%BB%AC%E5%B9%B8%E7%A6%8F%EF%BC%9F/","path":"2022/11/11/增长没有让我们幸福？/","title":"新时代的马克思主义——去增长（degrowth)哲学"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://182.43.235.69:10002/2023/03/04/2023-03-04-%E5%AE%B6%E5%BA%AD%E5%AE%BD%E5%B8%A6%E7%94%A8%E6%88%B7cloudflare%E6%9C%8D%E5%8A%A1%E4%B8%8D%E7%A8%B3%E5%AE%9A%E5%8E%9F%E5%9B%A0%E5%88%86%E6%9E%90/","path":"2023/03/04/2023-03-04-家庭宽带用户cloudflare服务不稳定原因分析/","title":"家庭宽带用户cloudflare服务不稳定原因分析"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>新时代的马克思主义——去增长（degrowth)哲学 | 星辰大海</title>
+<title>家庭宽带用户cloudflare服务不稳定原因分析 | 星辰大海</title>
   
 
 
@@ -103,7 +105,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -116,6 +118,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">目标：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">解决：</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -188,7 +191,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://182.43.235.69:10002/2022/11/11/%E5%A2%9E%E9%95%BF%E6%B2%A1%E6%9C%89%E8%AE%A9%E6%88%91%E4%BB%AC%E5%B9%B8%E7%A6%8F%EF%BC%9F/">
+    <link itemprop="mainEntityOfPage" href="http://182.43.235.69:10002/2023/03/04/2023-03-04-%E5%AE%B6%E5%BA%AD%E5%AE%BD%E5%B8%A6%E7%94%A8%E6%88%B7cloudflare%E6%9C%8D%E5%8A%A1%E4%B8%8D%E7%A8%B3%E5%AE%9A%E5%8E%9F%E5%9B%A0%E5%88%86%E6%9E%90/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/ipadipod.png">
@@ -201,12 +204,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="新时代的马克思主义——去增长（degrowth)哲学 | 星辰大海">
+      <meta itemprop="name" content="家庭宽带用户cloudflare服务不稳定原因分析 | 星辰大海">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          新时代的马克思主义——去增长（degrowth)哲学
+          家庭宽带用户cloudflare服务不稳定原因分析
         </h1>
 
         <div class="post-meta-container">
@@ -216,9 +219,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-11-11 00:00:00 / 修改时间：07:15:23" itemprop="dateCreated datePublished" datetime="2022-11-11T00:00:00+00:00">2022-11-11</time>
+      <time title="创建时间：2023-03-04 00:00:00" itemprop="dateCreated datePublished" datetime="2023-03-04T00:00:00+00:00">2023-03-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-03-06 01:51:17" itemprop="dateModified" datetime="2023-03-06T01:51:17+00:00">2023-03-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -226,7 +235,11 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%BB%8F%E6%B5%8E-%E6%80%9D%E6%83%B3/" itemprop="url" rel="index"><span itemprop="name">经济 思想</span></a>
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E7%BF%BB%E5%A2%99/" itemprop="url" rel="index"><span itemprop="name">翻墙</span></a>
         </span>
     </span>
 
@@ -247,10 +260,49 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>在日本新近回归主流的马克思主义思潮中，哲学家斋藤幸平是代表性人物。他的著作近年意外走红，他主张“去增长”是解决社会问题的唯一办法。</p>
+        <h3 id="目标："><a href="#目标：" class="headerlink" title="目标："></a>目标：</h3><ul>
+<li>cloudflare这么好用，又不需要固定IP（不需要买云主机），又隐私（看不到服务器真正IP），又安装（半截https），它不香吗？必须换用啊！</li>
+</ul>
+<p><strong>问题：</strong>    </p>
+<ul>
+<li>尝试将网站切换到unraid后，配置好cloudflared@centos7，结果发现cloudflared很不稳定，有时通有时不通。    </li>
+<li>看cloudflare网站tunnel列表上就是有时不通，有时健康度是“DEGRADED”状态。</li>
+</ul>
 <span id="more"></span>
 
-<p>单从东京金融区最大书店的畅销区来判断，2022年底的日本街头应该已经燃起了革命的火焰。<br>其中一组架子上的书籍崇拜商业，把全球商界领袖奉若神明，承诺读者用7把通往成功的钥匙就能走上人生巅峰。这些书谈到它们认定的危机——养老金缺口、人口断崖式下跌、气候内爆——时怀着无畏的信念，认为资本主义将提供解决方案。<br>但过道的另一边是最新重录的卡尔•马克思(Karl Marx)的呐喊——这些在他逝世后由其他作者撰写的书籍认为，应该给世界经济推进器踩下刹车。最新的这类书籍包装得很符合沮丧的现代日本的大众消费口味，被推介为新颖、富有远见的“去增长”(degrowth)哲学。<br>新一波旨在透过马克思主义棱镜观察全球性问题的日本书籍中，有一本解释《资本论》(Das Kapital)的漫画，描绘了一个迷人的山间露营地剥削工人的现象，目标是在工薪族读者中拓展潜在的去增长皈依者。<br>日本新近回归主流的马克思主义思潮中首屈一指的人物是斋藤幸平(Kohei Saito)，一位非常有意思的哲学家。他在东京大学(University of Tokyo)一间摆着满墙书籍的书房中表示，面对不平等危机和迫在眉睫的环境灾难，去增长是解救社会的唯一办法。增长没有让我们幸福。沮丧四处弥漫。他争论道，可重复使用的咖啡瓶并不会让我们少喝咖啡。<br>无论日本公众是否真的认同这种论述——也没有理由将庞大的读者群等同于广泛的信服——但许多人肯定对斋藤在这一问题上的阐述感到好奇。从另一个角度来说，它本身也十分有趣——这个角度就是日本较少被讨论的代际分歧之一：50岁以上的人和35岁以下的人之间的割裂，后者可以说是富裕国家第一批的去增长支持者。<br>斋藤的《人类世的“资本论”》(Capital in the Anthropocene)出版于2020年底，看上去没有太大潜力成为畅销书，该书在引用马克思对自然世界的著述之外，呼吁在可持续性和气候变化问题上采取行动。但斋藤表示，疫情自然而然引发了对去增长观念的认同，把日本从“正常生活不可能在一夜之间发生巨大变化”的信念中摇醒。甚至作者都感到意外的是，这本试图对系统性剧变提出应对方法的书卖出了超过50万本，而且将在明年出版英文版和其他语言版本。他的新作品《大洪水前：马克思与行星的新陈代谢》(Before the Great Flood: Marx and planetary metabolism)上月出版，据丸善书店(Maruzen)的销售人员称，该书卖得很火爆。<br>尽管斋藤用学术语言陈述他的论点，但他的去增长哲学的元素与日本以外一些最高调的气候活动人士有重叠。斋藤的使命很大一部分只是要激发日本人在气候紧急状况上进行对话，他认为此类对话现在几乎不存在。<br>他无情抨击了日本经济中充斥着“狗屁工作”(bullshit jobs)的历史倾向，这些工作占用了日本越来越宝贵的劳动力，让他们做没有意义的事。他表示，应该对肉、运动型多用途车(SUV)和跑车征收比现在多得多的税，来抵消它们造成的破坏。他还认为，由于广告在推广无穷无尽的不必要消费方面效果太好，它们应该受到严格限制——尤其是在东京街头上方闪烁的那种巨型液晶显示屏，它们榨取了日本浪费不起的电力。他说：“我们可以消灭社会上的广告，除了广告行业以外没有人会受打击。”<br>但斋藤承认，他的新马克思主义流派最具商业意义的方面，很可能在于提出学说的是个35岁的人。斋藤出生于1980年代末的通胀时期，当时的金融泡沫是有史以来最大的泡沫之一，他进入小学时，日本的三十年经济停滞刚刚开始。<br>在他成年后的大部分时间里，日本一直处于通缩中，全国的工资没有上涨，利率一直为零。他可能认为日本仍是一个消费主义大行其道、实行具有破坏性、痴迷于增长的资本主义的国家，但日本已有两代人在进入成年时未能像前人一样经历增长，而他正属于其中一代人。<br>他猜测，他的读者就是这样的日本人，他们也许在思考，他提出的那种猛烈的系统性转变是否并非完全不可能。当然，日本的街头没有陷入革命火海。但一些人可能已经悄悄接受了去增长哲学。</p>
+<p><strong>情况：</strong></p>
+<ul>
+<li>使用<code>cloudflare tunnel run --token &quot;token-id&quot;</code>可以运行服务并实时反馈运行错误信息。</li>
+<li>实际得到的反馈是使用quic协议连接服务器IP（主要有几个198.41.x.x的几个固定地址），得到“operation not permitted””network timeout”都各种错误。ping这几个IP是可以通的。</li>
+<li>而天翼云主机和国外的小主机则非常稳定在“HEALTHY”状态。</li>
+</ul>
+<h3 id="解决："><a href="#解决：" class="headerlink" title="解决："></a>解决：</h3><ul>
+<li>研究了一大通，各种说法都有。</li>
+<li>有说是墙了，有说是运营商特意设置了时通时不通的阴险套路。</li>
+<li>有说quic连接协议换成http2可以解决。</li>
+</ul>
+<p>研究工具和方法：</p>
+<ul>
+<li>使用<code>cloudflare tunnel run/list/info</code>指令，查看输出结果</li>
+<li>从info中可以看到成功连接的通道数量和实际使用的IP。</li>
+<li>编辑配置文件使用http2协议，结果一样不行。</li>
+<li>开始发现关闭openclash似乎可以，实际也不行，甚至daemon连接quic启动时连接服务器的域名都不能解析。</li>
+</ul>
+<p>推理过程：</p>
+<ul>
+<li>天翼云和123小主机使用的都是自己的实际IP，说明这几个IP是没有被墙的。</li>
+<li>quic协议也没有问题。</li>
+</ul>
+<p>初步研究成果结论：</p>
+<ul>
+<li>cloudflare服务影响力太大，某国政府和运营商难于彻底墙闭。</li>
+<li>既然不能完全墙闭，那要怎么搞呢？当然优选策略是运营商固定IP可以正常使用，家庭宽带动态IP段不能使用这个策略最理想了。也就是说，cloudflare服务对个人用户是被墙的状态。</li>
+<li>那对策当然是使用代理来解决了。</li>
+<li>实际查看在openclash的即时连接列表中，服务器的那几个固定IP:8774服务走的已经全部都是走代理。然后tunnel info中看到的，也是代理节点机的IP。</li>
+<li>但实际效果是，使用了代理，也不稳定。原因？可能quic被识别出来了？</li>
+<li>openclash全局配置中，有一个禁用QUIC的选项，开关似乎也没有作用。</li>
+<li>先凑和用，再看</li>
+</ul>
 
     </div>
 
@@ -259,19 +311,20 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/cloudflare/" rel="tag"># cloudflare</a>
+              <a href="/tags/openclash/" rel="tag"># openclash</a>
+          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2022/10/27/2022-10-27-%E5%9B%BD%E4%BC%81%E8%8C%83%E5%BC%8F/" rel="prev" title="国企范式">
-                  <i class="fa fa-chevron-left"></i> 国企范式
+                <a href="/2023/03/03/%E6%B8%85%E6%98%8E%E8%8A%82%E8%80%83%E6%BA%90/" rel="prev" title="清明节考源">
+                  <i class="fa fa-chevron-left"></i> 清明节考源
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/11/24/%E5%A4%AE%E8%A1%8C%E6%95%B0%E5%AD%97%E8%B4%A7%E5%B8%81%E5%8A%9F%E8%83%BD/" rel="next" title="央行数字货币功能">
-                  央行数字货币功能 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
